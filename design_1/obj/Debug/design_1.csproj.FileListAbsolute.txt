@@ -1,0 +1,14 @@
+D:\лаби\c#\design_1\design_1\bin\Debug\design_1.exe.config
+D:\лаби\c#\design_1\design_1\bin\Debug\design_1.exe
+D:\лаби\c#\design_1\design_1\bin\Debug\design_1.pdb
+D:\лаби\c#\design_1\design_1\obj\Debug\design_1.csproj.AssemblyReference.cache
+D:\лаби\c#\design_1\design_1\obj\Debug\design_1.Properties.Resources.resources
+D:\лаби\c#\design_1\design_1\obj\Debug\design_1.csproj.GenerateResource.cache
+D:\лаби\c#\design_1\design_1\obj\Debug\design_1.csproj.CoreCompileInputs.cache
+D:\лаби\c#\design_1\design_1\obj\Debug\design_1.exe
+D:\лаби\c#\design_1\design_1\obj\Debug\design_1.pdb
+D:\лаби\c#\design_1\design_1\obj\Debug\design_1.Form1.resources
+D:\лаби\c#\design_1\design_1\bin\Debug\FontAwesome.Sharp.dll
+D:\лаби\c#\design_1\design_1\obj\Debug\design_1.csproj.CopyComplete
+D:\лаби\c#\design_1\design_1\obj\Debug\design_1.Forms.FormDataBases.resources
+D:\лаби\c#\design_1\design_1\obj\Debug\design_1.Forms.FormGeneral.resources
