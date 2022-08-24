@@ -185,14 +185,13 @@ namespace design_1.Forms
             {
                 int row = dataGridView1.SelectedCells[0].RowIndex;
                 dataGridView1.Rows.RemoveAt(row);
-                data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows[row].Delete();
-
-                /////////////////////
+                //data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows[row].Delete();
+                ReadExcel();
             }
             catch (Exception)
             {
 
-                throw;
+                MessageBox.Show("fff");
             }
         }
 
@@ -200,8 +199,13 @@ namespace design_1.Forms
         {
             try
             {
-                int row = dataGridView1.SelectedCells[0].RowIndex;
-                int lastrow = dataGridView1.Rows.Count - 2;
+                if(newrowadd == true)
+                {
+                    ReadExcel();
+                    newrowadd = false;
+                }
+               // int row = dataGridView1.SelectedCells[0].RowIndex;
+                /*int lastrow = dataGridView1.Rows.Count - 2;
 
                 DataRow r1 = data.Tables[Convert.ToString(comboBox1.SelectedItem)].NewRow();
 
@@ -215,13 +219,12 @@ namespace design_1.Forms
 
                 data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows.Add(r1);
                 data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows.RemoveAt(data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows.Count - 1);
-                dataGridView1.Rows.RemoveAt(dataGridView1.Rows.Count - 2);
-                //////////////////
-                newrowadd = false;
+                dataGridView1.Rows.RemoveAt(dataGridView1.Rows.Count - 1);*/
+
+                
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -250,7 +253,7 @@ namespace design_1.Forms
         {
             try
             {
-                int lastrow = dataGridView1.SelectedCells[0].RowIndex;
+                /*int lastrow = dataGridView1.SelectedCells[0].RowIndex;
 
                 data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows[lastrow][0] = dataGridView1.Rows[lastrow].Cells[0].Value;
                 data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows[lastrow][1] = dataGridView1.Rows[lastrow].Cells[1].Value;
@@ -258,9 +261,12 @@ namespace design_1.Forms
                 data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows[lastrow][3] = dataGridView1.Rows[lastrow].Cells[3].Value;
                 data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows[lastrow][4] = dataGridView1.Rows[lastrow].Cells[4].Value;
                 data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows[lastrow][5] = dataGridView1.Rows[lastrow].Cells[5].Value;
-                data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows[lastrow][6] = dataGridView1.Rows[lastrow].Cells[6].Value;
-
-                /////////////////////
+                data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows[lastrow][6] = dataGridView1.Rows[lastrow].Cells[6].Value;*/
+                if (newrowadd == true)
+                {
+                    ReadExcel();
+                    newrowadd = false;
+                }
             }
             catch (Exception)
             {
@@ -270,32 +276,33 @@ namespace design_1.Forms
         }
         private void ReadExcel()
         {
-                int n = comboBox1.SelectedIndex + 1;
-                Excel.Application ea = new Excel.Application();
+            int n = comboBox1.SelectedIndex + 1;
+            Excel.Application ea = new Excel.Application();
 
-                Excel.Workbook ee = ea.Workbooks.Open(path1);
-                Excel.Worksheet ww = ee.Worksheets[n];
-                for (int i = 0; i < dataGridView1.RowCount - 2; i++)
+            Excel.Workbook ee = ea.Workbooks.Open(path1, false);
+            Excel.Worksheet ww = ee.Worksheets[n];
+            for (int i = 0; i < dataGridView1.RowCount - 2; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count - 1; j++)
                 {
-                    for (int j = 0; j < dataGridView1.Columns.Count - 1; j++)
-                    {
-                        ww.Cells[i + 2, j + 1] = dataGridView1[j, i].Value.ToString();
-                    }
+                    ww.Cells[i + 2, j + 1] = dataGridView1[j, i].Value.ToString();
                 }
-                ea.Visible = true;
-                ee.SaveAs(path1);
-                
-            
+            }
+            ea.Visible = true;
+            ee.SaveAs(path1);
+            ee.Close();
+
         }
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                if (newrowadd == false)
+               /* if (newrowadd == false)
                 {
+                    newrowadd = true;
                     int ri = dataGridView1.SelectedCells[0].RowIndex;
                     DataGridViewRow edit = dataGridView1.Rows[ri];
-                }
+                }*/
             }
             catch (Exception)
             {
@@ -306,7 +313,7 @@ namespace design_1.Forms
 
         private void iconButton7_Click(object sender, EventArgs e)
         {
-            ReadExcel();
+           ReadExcel();
         }
     }
 }
