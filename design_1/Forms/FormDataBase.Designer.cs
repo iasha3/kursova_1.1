@@ -96,7 +96,7 @@ namespace design_1.Forms
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView1.Size = new System.Drawing.Size(690, 349);
+            this.dataGridView1.Size = new System.Drawing.Size(700, 349);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
@@ -109,7 +109,7 @@ namespace design_1.Forms
             this.vScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.vScrollBar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vScrollBar1.Location = new System.Drawing.Point(786, 141);
+            this.vScrollBar1.Location = new System.Drawing.Point(796, 141);
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(17, 326);
             this.vScrollBar1.TabIndex = 1;
@@ -120,7 +120,7 @@ namespace design_1.Forms
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(775, 128);
+            this.label1.Location = new System.Drawing.Point(785, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 349);
             this.label1.TabIndex = 2;
@@ -147,7 +147,7 @@ namespace design_1.Forms
             this.label2.Location = new System.Drawing.Point(9, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(904, 482);
+            this.label2.Size = new System.Drawing.Size(914, 482);
             this.label2.TabIndex = 4;
             this.label2.Text = "categories";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -179,7 +179,7 @@ namespace design_1.Forms
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(615, 59);
+            this.iconButton2.Location = new System.Drawing.Point(625, 59);
             this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(60, 50);
@@ -201,7 +201,7 @@ namespace design_1.Forms
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(686, 59);
+            this.iconButton3.Location = new System.Drawing.Point(696, 59);
             this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(60, 50);
@@ -222,7 +222,7 @@ namespace design_1.Forms
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(756, 59);
+            this.iconButton4.Location = new System.Drawing.Point(766, 59);
             this.iconButton4.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(60, 50);
@@ -244,7 +244,7 @@ namespace design_1.Forms
             "1000 - 5000",
             "5000 - ∞",
             "Все"});
-            this.comboBox2.Location = new System.Drawing.Point(615, 24);
+            this.comboBox2.Location = new System.Drawing.Point(625, 24);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(201, 21);
             this.comboBox2.TabIndex = 11;
@@ -263,7 +263,7 @@ namespace design_1.Forms
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(837, 158);
+            this.iconButton1.Location = new System.Drawing.Point(847, 151);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(60, 50);
@@ -285,7 +285,7 @@ namespace design_1.Forms
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton5.IconColor = System.Drawing.Color.Black;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Location = new System.Drawing.Point(837, 255);
+            this.iconButton5.Location = new System.Drawing.Point(847, 217);
             this.iconButton5.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(60, 50);
@@ -307,7 +307,7 @@ namespace design_1.Forms
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton6.IconColor = System.Drawing.Color.Black;
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.Location = new System.Drawing.Point(837, 355);
+            this.iconButton6.Location = new System.Drawing.Point(847, 279);
             this.iconButton6.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Size = new System.Drawing.Size(60, 50);
@@ -329,7 +329,7 @@ namespace design_1.Forms
             this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton7.IconColor = System.Drawing.Color.Black;
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.Location = new System.Drawing.Point(379, 24);
+            this.iconButton7.Location = new System.Drawing.Point(847, 385);
             this.iconButton7.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Size = new System.Drawing.Size(60, 50);
@@ -342,7 +342,7 @@ namespace design_1.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 500);
+            this.ClientSize = new System.Drawing.Size(932, 500);
             this.Controls.Add(this.iconButton7);
             this.Controls.Add(this.iconButton6);
             this.Controls.Add(this.iconButton5);

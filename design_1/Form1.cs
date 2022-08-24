@@ -14,14 +14,15 @@ using System.Windows.Forms;
 using Application = System.Windows.Forms.Application;
 using Button = System.Windows.Forms.Button;
 using Control = System.Windows.Forms.Control;
-using Point1 = System.Drawing.Point;
+using Point = System.Drawing.Point;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace design_1
 {
     public partial class Form1 : Form
     {
         private Form cChildForm;
-        Point1 lastpoint;
+        Point lastpoint;
         public Form1()
         {
             InitializeComponent();
@@ -97,31 +98,51 @@ namespace design_1
         private void Menumenu()
         {
             if(this.menu.Width>100){
-                menu.Width = 100;
-                btnmenu.Dock = DockStyle.Top;
+                menu.Width = 90;
                 foreach (Button menubtn in menu.Controls.OfType<Button>())
                 {
                     menubtn.Text = "";
                     btnmenu.Text = "";
                     btnmenu.ImageAlign = ContentAlignment.MiddleCenter;
                     menubtn.ImageAlign = ContentAlignment.MiddleCenter;
+                    btnmenu.IconChar = FontAwesome.Sharp.IconChar.Navicon;
+                    exit.ImageAlign = ContentAlignment.MiddleCenter;
+                    btnmenu.IconSize = 45;
+                    icon1.IconSize = 35;
+                    icon2.IconSize = 35;
+                    icon3.IconSize = 35;
+                    icon4.IconSize = 35;
+                    icon5.IconSize = 35;
+                    exit.IconSize = 35;
+                    exit.Text = "";
+                    exit.Dock = DockStyle.Bottom;
                     menubtn.Padding = new Padding(0);
                     if (cChildForm != null)
                     {
-                        cChildForm.Width = 922;
+                        cChildForm.Width = 932;
                     }
                 }
             }
             else{
                 menu.Width = 180;
-                btnmenu.Dock = DockStyle.None;
                 foreach (Button menubtn in menu.Controls.OfType<Button>())
                 {
-                    menubtn.Text = "    "+ menubtn.Tag.ToString();
+                    menubtn.Text = "    " + menubtn.Tag.ToString();
+                    exit.Text = exit.Tag.ToString();
                     btnmenu.Text = "MONO\nDRUG";
+                    exit.Dock = DockStyle.None;
+                    btnmenu.IconChar = FontAwesome.Sharp.IconChar.HeartPulse;
                     btnmenu.ImageAlign = ContentAlignment.MiddleLeft;
                     menubtn.ImageAlign = ContentAlignment.MiddleLeft;
                     menubtn.Padding = new Padding(10, 0, 0, 0);
+                    exit.ImageAlign = ContentAlignment.MiddleLeft;
+                    btnmenu.IconSize = 50;
+                    exit.IconSize = 30;
+                    icon1.IconSize = 30;
+                    icon2.IconSize = 30;
+                    icon3.IconSize = 30;
+                    icon4.IconSize = 30;
+                    icon5.IconSize = 30;
                     if (cChildForm != null)
                     {
                         cChildForm.Width = 842;
@@ -235,7 +256,7 @@ namespace design_1
 
         private void menuStrip1_MouseDown(object sender, MouseEventArgs e)
         {
-            lastpoint = new System.Drawing.Point(e.X, e.Y);
+            lastpoint = new Point(e.X, e.Y);
         }
 
         private void panelDesktop_MouseMove(object sender, MouseEventArgs e)
@@ -249,12 +270,12 @@ namespace design_1
 
         private void panelDesktop_MouseDown(object sender, MouseEventArgs e)
         {
-            lastpoint = new System.Drawing.Point(e.X, e.Y);
+            lastpoint = new Point(e.X, e.Y);
         }
 
         private void menu_MouseDown(object sender, MouseEventArgs e)
         {
-            lastpoint = new System.Drawing.Point(e.X, e.Y);
+            lastpoint = new Point(e.X, e.Y);
         }
 
         private void menu_MouseMove(object sender, MouseEventArgs e)
@@ -268,34 +289,8 @@ namespace design_1
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-            if (menu.BackColor == Color.MediumSeaGreen)
-            {
-                menu.BackColor = Color.Lime;
-                foreach (Button menubtn in menu.Controls.OfType<Button>())
-                {
-                    menubtn.BackColor = Color.Lime;
-                    btnmenu.BackColor = Color.Lime;
-                }
-                if (cChildForm != null)
-                {
-                    cChildForm.BackColor = Color.DarkSlateGray;
-                }
-                
-            }
-            else
-            {
-                menu.BackColor = Color.MediumSeaGreen;
-                foreach (Button menubtn in menu.Controls.OfType<Button>())
-                {
-                    menubtn.BackColor = Color.MediumSeaGreen;
-                    btnmenu.BackColor = Color.MediumSeaGreen;
-                }
-                if (cChildForm != null)
-                {
-                    cChildForm.BackColor = Color.White;
-                }
-            }
             
+
         }
 
         private void iconButton5_Click_1(object sender, EventArgs e)
@@ -319,7 +314,51 @@ namespace design_1
         {
 
         }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void iconButton6_Click_1(object sender, EventArgs e)
+        {
+            OpenChForm(new FormHistory());
+        }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            if (menu.BackColor == Color.MediumSeaGreen)
+            {
+                menu.BackColor = Color.Lime;
+                foreach (Button menubtn in menu.Controls.OfType<Button>())
+                {
+                    menubtn.BackColor = Color.Lime;
+                    btnmenu.BackColor = Color.Lime;
+                    icon5.IconChar = FontAwesome.Sharp.IconChar.Moon;
+                }
+                if (cChildForm != null)
+                {
+                    cChildForm.BackColor = Color.DarkSlateGray;
+                }
+
+            }
+            else
+            {
+                menu.BackColor = Color.MediumSeaGreen;
+                foreach (Button menubtn in menu.Controls.OfType<Button>())
+                {
+                    menubtn.BackColor = Color.MediumSeaGreen;
+                    btnmenu.BackColor = Color.MediumSeaGreen;
+                    icon5.IconChar = FontAwesome.Sharp.IconChar.Sun;
+                }
+                if (cChildForm != null)
+                {
+                    cChildForm.BackColor = Color.White;
+                }
+            }
+        }
     }
+    
 
 }
 

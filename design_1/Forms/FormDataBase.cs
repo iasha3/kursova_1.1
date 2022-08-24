@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using ExcelDataReader;
 using Excel = Microsoft.Office.Interop.Excel;
 using SD = System.Data;
+using design_1;
+
 
 namespace design_1.Forms
 {
@@ -186,7 +188,6 @@ namespace design_1.Forms
                 int row = dataGridView1.SelectedCells[0].RowIndex;
                 dataGridView1.Rows.RemoveAt(row);
                 //data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows[row].Delete();
-                ReadExcel();
             }
             catch (Exception)
             {
@@ -201,7 +202,6 @@ namespace design_1.Forms
             {
                 if(newrowadd == true)
                 {
-                    ReadExcel();
                     newrowadd = false;
                 }
                // int row = dataGridView1.SelectedCells[0].RowIndex;
@@ -236,8 +236,8 @@ namespace design_1.Forms
                 if (newrowadd == false)
                 {
                     newrowadd = true;
-                    int lastrow = dataGridView1.Rows.Count - 2;
-                    DataGridViewRow r = dataGridView1.Rows[lastrow];
+                    /*int lastrow = dataGridView1.Rows.Count - 2;
+                    DataGridViewRow r = dataGridView1.Rows[lastrow];*/
 
                 }
             }
@@ -264,7 +264,6 @@ namespace design_1.Forms
                 data.Tables[Convert.ToString(comboBox1.SelectedItem)].Rows[lastrow][6] = dataGridView1.Rows[lastrow].Cells[6].Value;*/
                 if (newrowadd == true)
                 {
-                    ReadExcel();
                     newrowadd = false;
                 }
             }
@@ -289,9 +288,8 @@ namespace design_1.Forms
                 }
             }
             ea.Visible = true;
-            ee.SaveAs(path1);
+            ee.SaveAs(path2);
             ee.Close();
-
         }
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
@@ -314,6 +312,44 @@ namespace design_1.Forms
         private void iconButton7_Click(object sender, EventArgs e)
         {
            ReadExcel();
+        }
+    }
+    class Customer : User
+    {
+        public Customer()
+        {
+
+        }
+        public static void add()
+        {
+            MessageBox.Show(":)");
+        }
+    }
+    class Aptekar : User
+    {
+        public Aptekar()
+        {
+
+        }
+
+    }
+    class Admin : User
+    {
+        public Admin()
+        {
+
+        }
+
+    }
+    interface II
+    {
+        void data();
+    }
+    abstract class User : II
+    {
+        public void data()
+        {
+
         }
     }
 }

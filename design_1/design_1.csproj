@@ -244,7 +244,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +261,12 @@
     </Compile>
     <Compile Include="Forms\FormGeneral.Designer.cs">
       <DependentUpon>FormGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormHistory.Designer.cs">
+      <DependentUpon>FormHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormOrdering.cs">
       <SubType>Form</SubType>
